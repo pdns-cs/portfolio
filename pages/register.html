@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Denese - Register</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    .gradient-custom {
+      background: linear-gradient(to right, #000000, #003333);
+    }
+    .required::after {
+      content: " *";
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <section class="gradient-custom vh-100">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+
+              <h3 class="mb-4">Register</h3>
+
+              <form id="registerForm">
+
+                <div class="form-floating mb-3 text-dark">
+                  <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                  <label for="firstName" class="required">First Name</label>
+                </div>
+
+                <div class="form-floating mb-3 text-dark">
+                  <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                  <label for="lastName" class="required">Last Name</label>
+                </div>
+
+                <div class="form-floating mb-3 text-dark">
+                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+                  <label for="username" class="required">Username</label>
+                </div>
+
+                <div class="form-floating mb-3 text-dark">
+                  <input type="password" class="form-control" id="password" placeholder="Create Password" required>
+                  <label for="password" class="required">Create Password</label>
+                </div>
+
+                <div class="form-floating mb-4 text-dark">
+                  <input type="date" class="form-control" id="birthday" placeholder="Birthday" required>
+                  <label for="birthday" class="required">Birthday</label>
+                </div>
+
+                <button class="btn btn-secondary btn-lg w-100 mb-4" type="submit">Register</button>
+
+                <p class="mb-0">Already have an account?</p>
+                <a href="login.html" class="text-light fw-bold">Login</a>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Registered successfully!');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
