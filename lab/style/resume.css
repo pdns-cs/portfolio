@@ -1,0 +1,134 @@
+/* Reset / Normalize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Keep card content centered */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center header content horizontally */
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  width: 100%; /* Make header take full width of the card */
+}
+
+.profile {
+  text-align: center;
+}
+
+.profile img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+}
+
+.profile h1 {
+  font-size: 2em;
+  color: #fff;
+  margin: 0;
+}
+
+.profile p {
+  margin: 4px 0;
+  color: #fff;
+}
+
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center; /* Center the buttons horizontally */
+  width: 100%; /* Make buttons container take full width */
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn.back {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn.back:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn.print {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn.print:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.skills,
+.education,
+.work-experience,
+.research-project,
+.activities {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 20px;
+  width: 100%; /* Make sections take full width */
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left; /* Align the section titles to the left */
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.skill {
+  background-color: #191919;
+  color: #fff;
+  padding: 10px;
+  border-left: 3px solid #fff;
+}
